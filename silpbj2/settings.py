@@ -122,7 +122,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # login 
-LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_REDIRECT_URL = 'dashboard_kontrak'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
