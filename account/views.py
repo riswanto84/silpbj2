@@ -24,6 +24,6 @@ def user_login(request):
         form = LoginForm()
     return render(request, 'account/login.html', {'form': form})
 
-@login_required
+@login_required(login_url='login')
 def dashboard(request):
     return render(request, 'account/dashboard.html',{'section': 'dashboard'})

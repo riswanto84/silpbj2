@@ -121,6 +121,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# login 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+#mail config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.kemsos.go.id'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'simpel_no-reply@kemsos.go.id'
+EMAIL_HOST_PASSWORD = 'UKPBJ_kem505'
+DEFAULT_FROM_EMAIL = 'simpel.lpse.kemsos.go.id <simpel_no-reply@kemsos.go.id'
