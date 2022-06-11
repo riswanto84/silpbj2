@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
     'account.apps.AccountConfig',
     'manajemen_kontrak.apps.ManajemenKontrakConfig',
     'django.contrib.admin',
@@ -121,10 +123,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Media
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # login 
 LOGIN_REDIRECT_URL = 'dashboard_kontrak'
 LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = "/"
 
 #mail config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -134,3 +140,6 @@ EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'simpel_no-reply@kemsos.go.id'
 EMAIL_HOST_PASSWORD = 'UKPBJ_kem505'
 DEFAULT_FROM_EMAIL = 'simpel.lpse.kemsos.go.id <simpel_no-reply@kemsos.go.id'
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

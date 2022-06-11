@@ -6,7 +6,7 @@ urlpatterns = [
     # post views
     path('', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('dashboard/', views.dashboard, name='dashboard'),
+    path('account_setting', views.account_setting, name='account_setting'),
 
     # reset password urls
     path('password_reset/', auth_views.PasswordResetView.as_view(),name='password_reset'),
